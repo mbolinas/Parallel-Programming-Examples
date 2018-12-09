@@ -1,0 +1,6 @@
+nx = 400
+c = 0.01
+height_init = 400
+width_init = 100
+nsteps = 50000
+wstep = 300

@@ -1,0 +1,4 @@
+Sequential: 0.969894s
+CUDA: 0.449988s
+
+Speedup: .969894 / .449988 = 2.1554, ~twice as fast

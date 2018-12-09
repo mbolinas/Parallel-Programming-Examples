@@ -1,0 +1,47 @@
+Marc Bolinas
+
+srun -n 40 ./pingpong.out
+Average time to transmit between 0 and 1: 0.0000006027
+Average time to transmit between 0 and 2: 0.0000005655
+Average time to transmit between 0 and 3: 0.0000004748
+Average time to transmit between 0 and 4: 0.0000005825
+Average time to transmit between 0 and 5: 0.0000004707
+Average time to transmit between 0 and 6: 0.0000005728
+Average time to transmit between 0 and 7: 0.0000004781
+Average time to transmit between 0 and 8: 0.0000005735
+Average time to transmit between 0 and 9: 0.0000004924
+Average time to transmit between 0 and 10: 0.0000005856
+Average time to transmit between 0 and 11: 0.0000004918
+Average time to transmit between 0 and 12: 0.0000005751
+Average time to transmit between 0 and 13: 0.0000005059
+Average time to transmit between 0 and 14: 0.0000005859
+Average time to transmit between 0 and 15: 0.0000004945
+Average time to transmit between 0 and 16: 0.0000005825
+Average time to transmit between 0 and 17: 0.0000004994
+Average time to transmit between 0 and 18: 0.0000005938
+Average time to transmit between 0 and 19: 0.0000005087
+Average time to transmit between 0 and 20: 0.0000007690
+Average time to transmit between 0 and 21: 0.0000006112
+Average time to transmit between 0 and 22: 0.0000007713
+Average time to transmit between 0 and 23: 0.0000005666
+Average time to transmit between 0 and 24: 0.0000007761
+Average time to transmit between 0 and 25: 0.0000005797
+Average time to transmit between 0 and 26: 0.0000007772
+Average time to transmit between 0 and 27: 0.0000005637
+Average time to transmit between 0 and 28: 0.0000007907
+Average time to transmit between 0 and 29: 0.0000005661
+Average time to transmit between 0 and 30: 0.0000008262
+Average time to transmit between 0 and 31: 0.0000005860
+Average time to transmit between 0 and 32: 0.0000008398
+Average time to transmit between 0 and 33: 0.0000008434
+Average time to transmit between 0 and 34: 0.0000010098
+Average time to transmit between 0 and 35: 0.0000008385
+Average time to transmit between 0 and 36: 0.0000010313
+Average time to transmit between 0 and 37: 0.0000008397
+Average time to transmit between 0 and 38: 0.0000010142
+Average time to transmit between 0 and 39: 0.0000008300
+
+Interestingly, average ping time increased as communication went toward the later processes.
+What was initially ~.0000005s almost doubled to ~.0000009s
+
+MPI_Barrier was used right before the pingpong began, but were not needed in between the send and receive statements because one thread would simply deadlock until it received the ping; no syncing was necessary
