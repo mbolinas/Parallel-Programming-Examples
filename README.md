@@ -1,4 +1,4 @@
-#Parallel Programming Examples & Exercises!
+##Parallel Programming Examples & Exercises!
 
 Solutions span different implementations and problems for parallel programming: **MPI**, **Pthreads**, **OpenMP**, and **CUDA**
 
